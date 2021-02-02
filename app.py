@@ -69,3 +69,18 @@ def stations():
 
     # Return 'JSONified' version of stations
     return jsonify(stations=stations)
+
+# Temperature Observations Route
+@app.route("/api/v1.0/tobs")
+def temp_monthly():
+
+    # Calculate previous year date
+    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+
+    # Query primary station for temp observations over previous year
+    results = session.query(Measurement.tobs).\
+        filter(Measurement.station == 'USC00519281').\
+        filter(Measurement.date >= prev_year).all()
+
+    temps = list(np.ravel(results))
+    return jsonify(temps=temps)
