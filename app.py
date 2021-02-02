@@ -56,4 +56,16 @@ def precipitation():
 
     # Return 'JSONified' version of precip dictionary
     return jsonify(precip)
+
+# Stations Route
+@app.route("/api/v1.0/stations")
+def stations():
     
+    # Query for all stations 
+    results = session.query(Station.station).all()
+
+    # Unravel results to 1-D array using numpy function .ravel(); convert to list
+    stations = list(np.ravel(results))
+
+    # Return 'JSONified' version of stations
+    return jsonify(stations=stations)
