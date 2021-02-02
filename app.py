@@ -39,3 +39,21 @@ def welcome():
     /api/v1.0/tobs
     /api/v1.0/temp/start/end
     ''')
+
+# Precipitation Route
+@app.route("/api/v1.0/precipitation")
+def precipitation():
+
+    # Calculate date 1 year prior to most recent date in database
+    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+
+    # Query for date/precipitation for previous year
+    precipitation = session.query(Measurement.date, Measurement.prcp).\
+        filter(Measurement.date >= prev_year).all()
+
+    # Create dictionary with key=date, value=precipitation
+    precip = {date: prcp for date, prcp in precipitation}
+
+    # Return 'JSONified' version of precip dictionary
+    return jsonify(precip)
+    
