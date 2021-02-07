@@ -21,8 +21,3 @@ The following box-and-whisker plot displays the climate data results for June an
 ## Summary
 
 It appears that the temperatures in Oahu are adequate to support the shop year-round, but more analysis is needed. In particular, it would be useful to understand how climate temperature corresponds with water temperature in the area, as well as surfing behaviors of locals.
-
-Possible additional queries to gather more weather data for December and June include:
-
--  
--
