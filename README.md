@@ -9,13 +9,15 @@ In order to secure investor funding for a Surf & Shake shop (selling surfing equ
 In general, temperatures in June are slightly higher than in December.
 
 - The mean temperature in Oahu in June is 74.9 F, compared to 71.0 F in December (3.9 degree differential)
-- The maximum temperature in June was 85.0 F, compared to 83.0 F in December (2 degree differential)
-- The minimum temperature in June was 64.0 F, compared to 56.0 F in December (8 degree differential)
+- The maximum temperature in June was 85.0 F, compared to 83.0 F in December (2.0 degree differential)
+- The minimum temperature in June was 64.0 F, compared to 56.0 F in December (8.0 degree differential)
 
 The following box-and-whisker plot displays the climate data results for June and December.
 
 ### Fig. 1: Oahu Climate Data Results
 
-![Oahu Boxplot](placeholder)
+![Oahu Boxplot](https://github.com/amberteets/surfs_up/blob/main/Oahu_Temps.png)
 
 ## Summary
+
+It appears that the temperatures in Oahu are adequate to support the shop year-round, but more analysis is needed. In particular, it would be useful to understand how climate temperature corresponds with water temperature in the area, as well as surfing behaviors of locals.
